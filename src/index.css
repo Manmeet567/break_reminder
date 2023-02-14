@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Potta One', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* #727B6F */
+body{
+    background-color: #070C15;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+/* h1{
+    border-radius: 24px;
+background: #343232;
+box-shadow: inset -8px 8px 16px #242323,
+            inset 8px -8px 16px #444242;
+} */
+.App{
+    color: rgb(241, 241, 250);
+    width: 560px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+nav{
+    border-bottom: 3px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 38px 39px -29px rgba(150, 150, 150, 0.6)
+}
+nav .dateContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav h1{
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+nav .dateContent .day{
+    font-size: 12px;
+}
+
+.clock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.clockHeader{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 40px 0;
+}
+
+.roundInfo{
+    margin-right: 50px;
+}
+
+.card {
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 20px;
+    width: 200px;
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+    transition: all .3s;
+}
+
+   
+.card2 {
+    padding: 20px 40px;
+    background-color: #1a1a1a;
+    transition: all .2s;
+    transform: scale(0.98);
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    width: 200px;
+}
+.card2 .colon{
+    margin: 0 20px;
+    font-size: 1.2em;
+}
+.card2 .minutes, .card2 .seconds{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card2 .minutes p:nth-child(1), .card2 .seconds p:nth-child(1){
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+.card2 .minutes p:nth-child(2), .card2 .seconds p:nth-child(2){
+    font-size: 0.7em;
+}
+
+   
+/* toggle button */
+
+.enableMusic > input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+    transition: .2s linear;
+}
+
+.enableMusic > label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 70px;
+	height: 35px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+    transition: .2s linear;
+}
+
+.enableMusic > label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 28px;
+	height: 25px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+.enableMusic > input:checked + label {
+	background: #bada55;
+}
+
+.enableMusic > input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+.enableMusic > label:active:after {
+	width: 40px;
+}
+
+.inputFields{
+    margin-top: 30px;
+}
+
+.inputFields .TimeInput{
+    margin: 20px 0;
+}
+.inputFields .Input:focus{
+    
+        color: rgb(0, 255, 255);
+        background-color: #212121;
+        outline-color: rgb(0, 255, 255);
+        box-shadow: 0px 0px 10px rgb(0, 255, 255);
+        transition: .1s;
+        transition-property: box-shadow;
+}
+
+.range input{
+	width:100%;
+	height:4px;
+	border-radius:5px;
+	background-color:#ba3950;
+	outline:none;
+}
+
+.range input::-webkit-slider-thumb{
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	background-color:#a83348;
+}
+.range span{
+	position:absolute;
+	margin-left:14px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+	width:50px;
+	height:30px;
+	background-color:#222;
+	color:#fff;
+	border-radius:3px;
+	text-align:center;
+	line-height:30px;
+}
+.range span:before{
+	content:'';
+	position:absolute;
+	border-right:9px solid transparent;
+	border-left:9px solid transparent;
+	border-bottom:12px solid #222;
+	left:-10px;
+	top:50%;
+	transform:translateY(-50%) rotate(-90deg);
+}
+
+
+/* footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+} */
+ .startButton{
+    margin-top: 50px;
+}
+ .startButton .playbtn{
+    position: absolute;
+    transition: .1s linear;
+    transform: translateX(5%);
+}
+ .startButton .pausebtn{
+    position: absolute;
+    transition: .1s linear;
+    transform: translateX(0%);
+}
+ .startButton .playActive{
+    display: none;
+}
+ .startButton .pauseActive{
+    display: none;
+}
+/* .devInfo p{
+    margin-top: 10px;
+} */
+
+/* toggle button end */
+
+@media screen and (max-width:920px) {
+    body{
+        background-color: #070C15;
+        height: 100vh;
+        display: block;
+    }
+    .App{
+        color: rgb(241, 241, 250);
+        width: 100%;
+    }
+    nav{
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+
+@media screen and (max-width:535px) {
+    nav h1{
+        font-size: 15px;
+    }
+    /* .clockHeader{
+        margin: 20px 0;
+    } */
+    .roundInfo{
+        margin-right: 0;
+        display: none;
+    }
+    .card{
+        margin-right: 30px;
+    }
+    .card,.card2{
+        width: 100%;
+    }
+    .music{
+        width: 60px;
+    }
+    .enableMusic > label{
+        width: 50px;
+        height: 25px;
+    }
+    .enableMusic > label:after {
+        width: 15px;
+        height: 15px;
+    }
+    .status{
+        margin: 0;
+    }
+    .inputFields{
+        margin-top: 10px;
+    }
+    .inputFields .TimeInput{
+        margin-right: 55px;
+    }
+    .devInfo p{
+        margin-top: 20px;
+    }
+    .startButton{
+        margin-top: 20px;
+    }
+}
